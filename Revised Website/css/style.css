@@ -12,6 +12,10 @@
   --shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   background: #fff;
@@ -20,12 +24,19 @@ body {
   line-height: 1.5;
 }
 
-.wrapper {
-  padding: 1rem 4rem;
+h1 {
+  margin: 0;
+  color: var(--main-green);
+  font-size: 1.5rem;
 }
 
-.box {
-  padding: 0.75rem;
+h2 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+p {
+  margin: 0;
 }
 
 /* Header Stylings */
@@ -43,10 +54,9 @@ header {
   z-index: 1;
 }
 
-header .header-text {
+.header-text {
   background: var(--overlay-green);
   width: 60%;
-  color: #fff;
   text-align: center;
   margin-bottom: 0.75rem;
   margin-top: 0.75rem;
@@ -56,12 +66,14 @@ header h1 {
   margin: 0;
   padding: 1rem;
   font-size: 3rem;
+  color: #fff;
 }
 
 header h2 {
   margin: 0;
   padding: 1.3rem;
   font-size: 1.3rem;
+  color: #fff;
 }
 
 /* Nav Stylings */
@@ -91,89 +103,50 @@ nav a:hover {
 }
 
 /* Overview Page Stylings */
-#overview-wrapper {
-  text-align: justify;
-  display: grid;
-  grid-gap: 0.5rem;
-  grid-template-areas:
-    "top-box top-box top-box top-box top-box top-box"
-    "box-a box-a box-b box-b box-c box-c"
-    ". bottom-box bottom-box bottom-box bottom-box .";
+.overview {
+  padding: 1rem 4rem;
 }
 
-#overview-wrapper h1 {
-  color: var(--main-green);
+.overview h1,
+.overview h2 {
   text-align: center;
 }
 
-#overview-wrapper h1,
-#overview-wrapper h2 {
-  font-size: 1.5rem;
+.overview p {
+  text-align: justify;
 }
 
-#overview-wrapper h3 {
-  font-size: 1.3rem;
-}
-
-#overview-wrapper h4,
-#overview-wrapper p {
-  font-size: 1rem;
-}
-
-#overview-wrapper h1,
-#overview-wrapper h2,
-#overview-wrapper h3 {
+.overview h1,
+.overview h2,
+.overview p {
   margin: 0.5rem;
-  text-align: center;
-}
-
-#overview-wrapper p {
-  text-align: justify;
-}
-
-#overview-wrapper .top-box {
-  grid-area: top-box;
-}
-
-#overview-wrapper .box-a {
-  grid-area: box-a;
-}
-
-#overview-wrapper .box-b {
-  grid-area: box-b;
-  border-left: solid var(--light) 1px;
-  border-right: solid var(--light) 1px;
-}
-
-#overview-wrapper .box-c {
-  grid-area: box-c;
-}
-
-#overview-wrapper .bottom-box {
-  grid-area: bottom-box;
-  background: var(--light);
-  box-shadow: var(--shadow);
 }
 
 /* Testimonial Stylings */
-.testimonial-container h1 {
-  text-align: center;
-  color: var(--main-green);
-  margin-top: 0;
+.testimonials {
+  width: 90%;
+  position: relative;
+  margin: auto;
 }
 
-.testimonial {
+.testimonials h1 {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.testimonial-slide {
+  display: none;
+  width: 100%;
+  min-height: 400px;
+  margin-bottom: 16px;
   background: var(--light);
-  margin: 0 1rem;
-  display: grid;
-  grid-template-columns: 1fr 2fr;
   box-shadow: var(--shadow);
-  height: 420px;
   align-items: center;
   justify-content: center;
+  grid-template-columns: 1fr 2fr;
 }
 
-.photo {
+.testimonials .photo {
   position: relative;
   width: 300px;
   height: 300px;
@@ -182,24 +155,13 @@ nav a:hover {
   margin: auto;
 }
 
-.photo img {
+.testimonials .photo img {
   width: 100%;
   height: auto;
 }
 
-/* Testimonial Carousel Stylings */
-.testimonial-container {
+.testimonials .text {
   width: 90%;
-  position: relative;
-  margin: auto;
-}
-
-.testimonial-slide {
-  display: none;
-  width: 90%;
-  min-height: 460px;
-  margin-left: 5%;
-  margin-bottom: 16px;
 }
 
 /* Next & previous buttons */
@@ -244,9 +206,48 @@ nav a:hover {
   transition: background-color 0.6s ease;
 }
 
+.dots {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
 .active,
 .dot:hover {
   background-color: #717171;
+}
+
+/* Personas Stylings */
+.personas h1 {
+  text-align: center;
+}
+
+.personas-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.persona {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.persona img {
+  width: 90%;
+  border-top-left-radius: 24px;
+  border-top-right-radius: 24px;
+  display: block;
+  margin: 0;
+}
+
+.persona .text {
+  width: 90%;
+  text-align: center;
+  background: var(--light);
+  padding: 16px;
+  border-bottom-left-radius: 24px;
+  border-bottom-right-radius: 24px;
+  margin: 0;
 }
 
 /* Footer Stylings */
@@ -301,7 +302,7 @@ footer p {
   }
 
   /* Overview Page Stylings */
-  #overview-wrapper {
+  .overview {
     grid-template-areas:
       "top-box"
       "box-a"
