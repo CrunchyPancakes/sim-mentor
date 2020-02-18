@@ -7,22 +7,18 @@ var testimonialContainer;
 
 window.addEventListener("load", function() {
   showSlides(slideIndex);
-  slideTimer = setInterval(function() {
-    plusSlides(1);
-  }, 4000);
+  resume();
 
-  testimonialContainer = document.getElementsByClassName(
-    "slideshow-container"
-  )[0];
+  testimonialContainer = document.getElementsByClassName("testimonials")[0];
 
-  slideshowContainer.addEventListener("mouseenter", pause);
-  slideshowContainer.addEventListener("mouseleave", resume);
+  testimonialContainer.addEventListener("mouseenter", pause);
+  testimonialContainer.addEventListener("mouseleave", resume);
 });
 
 //Controls the current slide and resets interval if needed
 function currentSlide(n) {
-  clearInterval(myTimer);
-  myTimer = setInterval(function() {
+  clearInterval(slideTimer);
+  slideTimer = setInterval(function() {
     plusSlides(n + 1);
   }, 4000);
   showSlides((slideIndex = n));
@@ -30,7 +26,7 @@ function currentSlide(n) {
 
 // Next/previous controls
 function plusSlides(n) {
-  showSlides((slideIndex += n));
+  showSlides((slideIndex = n + 1));
 }
 
 function showSlides(n) {
@@ -54,12 +50,32 @@ function showSlides(n) {
 }
 
 pause = () => {
-  clearInterval(myTimer);
+  clearInterval(slideTimer);
 };
 
 resume = () => {
-  clearInterval(myTimer);
-  myTimer = setInterval(function() {
+  clearInterval(slideTimer);
+  slideTimer = setInterval(function() {
     plusSlides(slideIndex);
-  }, 5000);
+  }, 4000);
 };
+
+// Personas script
+const persona_one = document.getElementById("persona_one");
+const persona_two = document.getElementById("persona_two");
+
+persona_one.addEventListener("mouseenter", e => {
+  e.target.classList.toggle("border");
+});
+
+persona_one.addEventListener("mouseleave", e => {
+  e.target.classList.toggle("border");
+});
+
+persona_two.addEventListener("mouseenter", e => {
+  e.target.classList.toggle("border");
+});
+
+persona_two.addEventListener("mouseleave", e => {
+  e.target.classList.toggle("border");
+});
