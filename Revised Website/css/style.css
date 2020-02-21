@@ -102,6 +102,28 @@ nav a:hover {
   transition: ease-in 0.5s;
 }
 
+/* Heading links for headings within a page */
+.heading-links {
+  display: flex;
+  justify-content: center;
+}
+
+.heading-links a {
+  padding: 1rem 2rem;
+  margin: 1rem 0.75rem;
+  color: var(--dark);
+  background: #fff;
+  box-shadow: var(--shadow);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.heading-links a:hover {
+  background: var(--main-green);
+  color: #fff;
+  transition: ease-in 0.5s;
+}
+
 /* Overview Page Stylings */
 .overview {
   padding: 1rem 4rem;
