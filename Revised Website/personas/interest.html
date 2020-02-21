@@ -23,19 +23,33 @@
     </header>
 
     <nav>
-      <a href="index.html">Back Home</a>
-      <a href="#">Download</a>
-      <a href="#">Bookmark</a>
+      <a href="index.html">Overview</a>
+      <a href="#">Career</a>
+      <a href="#">Course Planner</a>
+      <a href="faq.html">FAQ</a>
     </nav>
 
-    <section class="persona-page">
-      <h2>Find out what is possible with IS</h2>
+    <div class="persona-links">
+      <a href="#">Download this Page <i class="fas fa-download"></i></a>
+      <a href="#">Bookmark this Page <i class="fas fa-bookmark"></i></a>
+    </div>
 
-      <div class="quiz">
+    <section class="persona-page">
+      <h1>Find out what is possible with IS</h1>
+
+      <div class="heading-links">
+        <a href="#quiz">Career Quiz</a>
+        <a href="#jobs">IS Jobs</a>
+        <a href="#info-degree">INFO Degree Explanation</a>
+        <a href="#general-faq">General FAQ</a>
+      </div>
+
+      <div class="quiz" id="quiz">
         <iframe src="http://careerquiz.sim.vuw.ac.nz" frameborder="0"></iframe>
       </div>
 
-      <div class="jobs">
+      <h2 id="jobs">Potential Careers</h2>
+      <div class="jobs" >
         <div class="job">
           <div class="job-img">
             <img src="../images/careers/user-experience-designer.jpg" alt="" />
@@ -135,7 +149,7 @@
       </div>
 
       <section class="faqs">
-        <h2>INFO Major explanation</h2>
+        <h2 id="info-degree">INFO Major explanation</h2>
         <p>
           To obtain a BCom (INFO) you will need to complete courses worth a
           total of at least 360 points. In addition to the Bachelor of Commerce
@@ -329,7 +343,7 @@
             </ul>
           </li>
         </ul>
-        <h2>General FAQ</h2>
+        <h2 id="general-faq">General FAQ</h2>
         <p>
           How do I know if I am eligible to study at Victoria University?
         </p>
@@ -453,7 +467,7 @@
         <p><i class="fas fa-phone"></i> +64 4 463-5103</p>
         <p><i class="far fa-envelope"></i> sim@vuw.ac.nz</p>
       </div>
-      <img src="images/vic_logo.svg" alt="" />
+      <img src="../images/vic_logo.svg" alt="" />
     </footer>
 
     <script src="../js/script.js"></script>
