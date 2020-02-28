@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/planner.css" />
+    <script
+      src="https://kit.fontawesome.com/ce0d2bff6f.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="planner" id="planner">
+      <h1>Course Planner</h1>
+
+      <p class="message" id="message">
+        Warning/ message pop-up will appear here. Basically show what courses
+        still need to be taken.
+      </p>
+
+      <div class="radio-container">
+        <h2>Take Information Systems as a Major, Minor or Elective:</h2>
+        <form action="" id="major-minor">
+          <input type="radio" name="major-minor" value="Major" id="major" />
+          <label for="major">
+            Major
+          </label>
+
+          <input type="radio" name="major-minor" value="Minor" id="minor" />
+          <label for="minor">
+            Minor
+          </label>
+
+          <input
+            type="radio"
+            name="major-minor"
+            value="Elective"
+            id="elective"
+          />
+          <label for="elective">
+            Elective
+          </label>
+        </form>
+      </div>
+
+      <div class="radio-container">
+        <h2>Type of Specialisation for Major:</h2>
+        <form action="">
+          <input
+            type="radio"
+            name="specialisation"
+            value="Business Analysis"
+            id="ba-spec"
+          />
+
+          <span class="ba-spec">
+            <label for="ba-spec">
+              Business Analysis
+            </label>
+          </span>
+
+          <input
+            type="radio"
+            name="specialisation"
+            value="IT Solutions"
+            id="it-spec"
+          />
+
+          <span class="it-spec">
+            <label for="it-spec">
+              IT Solutions
+            </label>
+          </span>
+
+          <input
+            type="radio"
+            name="specialisation"
+            value="INFO Major"
+            id="info-major"
+          />
+          <label for="info-major">
+            INFO Major
+          </label>
+        </form>
+      </div>
+
+      <div class="courses-taken" id="courses-taken">
+        <h2>Select Courses Already Taken:</h2>
+        <h3>100 Level</h3>
+        <div class="course-select">
+          <div class="course-btn">
+            <p>INFO101</p>
+            <i class="fas fa-info-circle"></i>
+          </div>
+          <div class="course-btn">
+            <p>INFO141</p>
+            <i class="fas fa-info-circle"></i>
+          </div>
+          <div class="course-btn">
+            <p>INFO151</p>
+            <i class="fas fa-info-circle"></i>
+          </div>
+        </div>
+
+        <h3>200 Level</h3>
+        <div class="course-select">
+          <div class="course-btn">
+            <p>INFO226</p>
+            <i class="fas fa-info-circle"></i>
+          </div>
+          <div class="course-btn">
+            <p>INFO231</p>
+            <i class="fas fa-info-circle"></i>
+          </div>
+          <div class="course-btn">
+            <p>INFO234</p>
+            <i class="fas fa-info-circle"></i>
+          </div>
+          <div class="course-btn">
+            <p>INFO246</p>
+            <i class="fas fa-info-circle"></i>
+          </div>
+          <div class="course-btn">
+            <p>INFO264</p>
+            <i class="fas fa-info-circle"></i>
+          </div>
+        </div>
+
+        <h3>300 Level</h3>
+        <div class="course-select">
+          <div class="course-btn">
+            <p>INFO334</p>
+            <i class="fas fa-info-circle"></i>
+          </div>
+          <div class="course-btn">
+            <p>INFO336</p>
+            <i class="fas fa-info-circle"></i>
+          </div>
+          <div class="course-btn">
+            <p>INFO354</p>
+            <i class="fas fa-info-circle"></i>
+          </div>
+          <div class="course-btn">
+            <p>INFO360</p>
+            <i class="fas fa-info-circle"></i>
+          </div>
+          <div class="course-btn">
+            <p>INFO376</p>
+            <i class="fas fa-info-circle"></i>
+          </div>
+          <div class="course-btn">
+            <p>INFO377</p>
+            <i class="fas fa-info-circle"></i>
+          </div>
+          <div class="course-btn">
+            <p>INFO381</p>
+            <i class="fas fa-info-circle"></i>
+          </div>
+          <div class="course-btn">
+            <p>INFO386</p>
+            <i class="fas fa-info-circle"></i>
+          </div>
+          <div class="course-btn">
+            <p>INFO388</p>
+            <i class="fas fa-info-circle"></i>
+          </div>
+        </div>
+
+        <h3>300 Capstone Level</h3>
+        <div class="course-select">
+          <div class="course-btn">
+            <p>INFO320</p>
+            <i class="fas fa-info-circle"></i>
+          </div>
+          <div class="course-btn">
+            <p>INFO395</p>
+            <i class="fas fa-info-circle"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="timetable">
+        <h2>Times Available for Selected Courses</h2>
+        <div class="drop-box" id="drop-box">
+          <div class="course-btn">
+            <p>???</p>
+            <i class="fas fa-info-circle"></i>
+          </div>
+          <div class="course-btn">
+            <p>???</p>
+            <i class="fas fa-info-circle"></i>
+          </div>
+          <div class="course-btn">
+            <p>???</p>
+            <i class="fas fa-info-circle"></i>
+          </div>
+        </div>
+
+        <div class="courses">
+          <div class="course-btn draggable" draggable="true">
+            <p>INFO101</p>
+            <i class="fas fa-info-circle"></i>
+          </div>
+          <div class="course-btn draggable" draggable="true">
+            <p>INFO141</p>
+            <i class="fas fa-info-circle"></i>
+          </div>
+          <div class="course-btn draggable" draggable="true">
+            <p>INFO151</p>
+            <i class="fas fa-info-circle"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/planner.js"></script>
+  </body>
+</html>

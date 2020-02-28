@@ -94,6 +94,86 @@
       <div class="course-lvl-list"></div>
     </section>
 
+    <div class="planner" id="planner">
+      <h2>Course Planner</h2>
+
+      <form action="">
+        <h3>Take Information Systems as a Major, Minor or Elective:</h3>
+        <label>
+          <input type="radio" name="taking-info" value="Major" />
+          Major
+        </label>
+        <label>
+          <input type="radio" name="taking-info" value="Minor" />
+          Minor
+        </label>
+        <label>
+          <input type="radio" name="taking-info" value="Elective" />
+          Elective
+        </label>
+      </form>
+
+      <div class="major" id="major">
+        <form action="">
+          <h3>Type of Specialisation for Major:</h3>
+          <label>
+            <input
+              type="radio"
+              name="specialisation"
+              value="Business Analysis"
+            />
+            Business Analysis
+          </label>
+          <label>
+            <input type="radio" name="specialisation" value="IT Solutions" />
+            IT Solutions
+          </label>
+          <label>
+            <input type="radio" name="specialisation" value="INFO Major" />
+            INFO Major
+          </label>
+        </form>
+      </div>
+
+      <div class="courses-taken" id="courses-taken">
+        <form action="">
+          <h3>What INFO papers have you taken?</h3>
+          <h3>Key:</h3>
+          <ul>
+            <li>Valid Courses for both BA and IT Specialisations</li>
+            <li>Valid Courses for BA Specialisation</li>
+            <li>Valid Courses or IT Specialisation</li>
+            <li>Option 300 Level Courses</li>
+          </ul>
+          <label>
+            <input type="checkbox" value="INFO101" checked />
+            INFO101
+          </label>
+          <label>
+            <input type="checkbox" value="INFO141" />
+            INFO141
+          </label>
+          <label>
+            <input type="checkbox" value="INFO151" />
+            INFO151
+          </label>
+        </form>
+
+        <p class="message">
+          Warning/ message pop-up will appear here. Basically show what courses
+          still need to be taken.
+        </p>
+
+        <div class="timetable">
+          <h3>Times Available for Selected Courses</h3>
+        </div>
+      </div>
+
+      <div class="minor" id="minor"></div>
+
+      <div class="elective" id="elective"></div>
+    </div>
+
     <footer>
       <div>
         <p><i class="fas fa-phone"></i> +64 4 463-5103</p>
@@ -102,6 +182,6 @@
       <img src="images/vic_logo.svg" alt="" />
     </footer>
 
-    <script src="js/script.js"></script>
+    <script src="js/planner.js"></script>
   </body>
 </html>

@@ -1,0 +1,170 @@
+/* Google Fonts */
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+/* font-family: 'Roboto', sans-serif; */
+
+/* Properties */
+:root {
+  --overlay-green: rgba(68, 159, 55, 0.75);
+  --main-green: #64a659;
+  --dark-green: #145609;
+  --light: #ddd;
+  --dark: #444;
+  --text-color: #434343;
+  --shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+  --ba-spec: #ffc107;
+  --it-spec: #007bff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #fff;
+  font-family: "Roboto", sans-serif;
+  color: var(--text-color);
+  line-height: 1.5;
+}
+
+h1 {
+  margin: 0;
+  color: var(--main-green);
+  font-size: 1.5rem;
+}
+
+h2 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+h3 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+p {
+  margin: 0;
+}
+
+/* Input Stylings */
+.planner {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.radio-container {
+  width: 50%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+/* Hide the radio check input */
+.radio-container input[type="radio"] {
+  display: none;
+}
+
+.radio-container label {
+  padding: 10px;
+  margin: 10px 5px;
+  width: 200px;
+  text-align: center;
+  background: #fff;
+  display: inline-block;
+  color: var(--main-green);
+  cursor: pointer;
+  border-radius: 100px;
+  border: 1px var(--main-green) solid;
+}
+
+.radio-container label:hover {
+  background: var(--main-green);
+  color: #fff;
+  font-weight: bold;
+  transition: ease-in 0.2s;
+}
+
+.radio-container input:checked + label {
+  background: var(--main-green);
+  color: #fff;
+}
+
+.ba-spec label {
+  border-color: var(--ba-spec);
+  color: var(--ba-spec);
+}
+
+.ba-spec label:hover {
+  background: var(--ba-spec);
+}
+
+.it-spec label {
+  border-color: var(--it-spec);
+  color: var(--it-spec);
+}
+
+.it-spec label:hover {
+  background: var(--it-spec);
+}
+
+.course-select {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  justify-content: center;
+  align-items: center;
+}
+
+.courses-taken h2 {
+  text-align: center;
+}
+
+.course-btn {
+  margin: 4px;
+  text-align: center;
+  display: flex;
+}
+
+.course-btn p {
+  background: #fff;
+  padding: 10px;
+  border-top-left-radius: 100px;
+  border-bottom-left-radius: 100px;
+  border: 1px var(--main-green) solid;
+  cursor: pointer;
+}
+
+.course-btn i {
+  color: #fff;
+  background: var(--main-green);
+  padding: 14px 12px 0 8px;
+  border-top-right-radius: 100px;
+  border-bottom-right-radius: 100px;
+  border: 1px var(--main-green) solid;
+  cursor: pointer;
+}
+
+.course-btn p:hover {
+  background: var(--main-green);
+  color: #fff;
+  font-weight: bold;
+  transition: ease-in 0.2s;
+}
+
+.course-btn i:hover {
+  background: var(--dark-green);
+  border-color: var(--dark-green);
+  transform: scale(1.1);
+  transition: ease-in 0.2s;
+}
+
+.drop-box {
+  background: var(--dark);
+  height: 100%;
+}
