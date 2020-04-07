@@ -1,0 +1,48 @@
+%btn {
+  display: flex;
+  border-radius: 50px;
+  border: none;
+  color: $dark;
+  background-color: $light;
+  cursor: pointer;
+
+  &:hover {
+    color: $light;
+    background-color: $dark;
+    transform: scale(1.1);
+    transition: ease-in 0.2s;
+  }
+}
+
+.btn-general {
+  @extend %btn;
+  padding: 12px 20px;
+  font-size: 16px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-general > * {
+  margin: 0 4px;
+}
+
+%btn-course {
+  @extend %btn;
+  flex-direction: row;
+}
+
+.btn-ba-course {
+  @extend %btn-course;
+  color: yellow;
+}
+
+.btn-it-course {
+  @extend %btn-course;
+  color: blue;
+}
+
+.btn-no-course {
+  @extend %btn-course;
+  color: green;
+}
