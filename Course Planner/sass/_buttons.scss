@@ -30,19 +30,32 @@
 %btn-course {
   @extend %btn;
   flex-direction: row;
+  padding: 10px;
+
+  a:link,
+  a:visited,
+  a:hover,
+  a:active {
+    text-decoration: none;
+    color: #fff;
+  }
 }
 
 .btn-ba-course {
   @extend %btn-course;
-  color: yellow;
+  color: $ba-course;
 }
 
 .btn-it-course {
   @extend %btn-course;
-  color: blue;
+  color: $it-course;
 }
 
 .btn-no-course {
   @extend %btn-course;
-  color: green;
+  color: $primary-green;
+}
+
+.selected {
+  background: purple;
 }

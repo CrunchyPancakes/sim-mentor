@@ -22,7 +22,7 @@ body {
 
 /* Questions Stylings */
 .questions {
-  width: 50%;
+  width: auto;
   padding: 2rem;
   display: flex;
   flex-direction: column;
@@ -30,7 +30,7 @@ body {
 
 .questions-container {
   text-align: center;
-  height: 250px;
+  height: 300px;
 }
 
 .questions-form {
@@ -103,8 +103,12 @@ body {
 
 .questions-buttons {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   padding: 0 2rem;
+}
+
+.questions-buttons button {
+  margin: 0 60px;
 }
 
 .hide {
@@ -120,4 +124,9 @@ body {
 .course-container {
   display: flex;
   flex-direction: row;
+}
+
+.courseBtn > p {
+  /* For JS click events, makes sure button is clicked, not button's children */
+  pointer-events: none;
 }

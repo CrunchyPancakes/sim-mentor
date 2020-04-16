@@ -9,22 +9,26 @@
 
 .btn-general > * { margin: 0 4px; }
 
-.btn-ba-course, .btn-it-course, .btn-no-course { -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; }
+.btn-ba-course, .btn-it-course, .btn-no-course { -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; padding: 10px; }
 
-.btn-ba-course { color: yellow; }
+.btn-ba-course a:link, .btn-it-course a:link, .btn-no-course a:link, .btn-ba-course a:visited, .btn-it-course a:visited, .btn-no-course a:visited, .btn-ba-course a:hover, .btn-it-course a:hover, .btn-no-course a:hover, .btn-ba-course a:active, .btn-it-course a:active, .btn-no-course a:active { text-decoration: none; color: #fff; }
 
-.btn-it-course { color: blue; }
+.btn-ba-course { color: #ffc107; }
 
-.btn-no-course { color: green; }
+.btn-it-course { color: #007bff; }
+
+.btn-no-course { color: #64a659; }
+
+.selected { background: purple; }
 
 * { -webkit-box-sizing: border-box; box-sizing: border-box; padding: 0; margin: 0; }
 
 body { height: 100vh; background-color: #fff; font-family: "Roboto", sans-serif; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
 
 /* Questions Stylings */
-.questions { width: 50%; padding: 2rem; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; }
+.questions { width: auto; padding: 2rem; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; }
 
-.questions-container { text-align: center; height: 250px; }
+.questions-container { text-align: center; height: 300px; }
 
 .questions-form { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; -webkit-box-align: center; -ms-flex-align: center; align-items: center; padding: 1rem; }
 
@@ -55,7 +59,9 @@ body { height: 100vh; background-color: #fff; font-family: "Roboto", sans-serif;
 /* Hide the radio check input */
 .questions-form input[type="radio"] { display: none; }
 
-.questions-buttons { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; padding: 0 2rem; }
+.questions-buttons { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; padding: 0 2rem; }
+
+.questions-buttons button { margin: 0 60px; }
 
 .hide { display: none; }
 
@@ -64,3 +70,5 @@ body { height: 100vh; background-color: #fff; font-family: "Roboto", sans-serif;
 
 /* Course Stylings */
 .course-container { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; }
+
+.courseBtn > p { /* For JS click events, makes sure button is clicked, not button's children */ pointer-events: none; }

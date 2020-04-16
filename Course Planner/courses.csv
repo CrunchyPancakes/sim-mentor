@@ -1,0 +1,20 @@
+﻿code,name,prereqs,spec,link
+INFO101,Introduction to Information Systems,,no,https://www.wgtn.ac.nz/courses/info/101/2020/offering?crn=10038
+INFO141,Systems Analysis,,no,https://www.wgtn.ac.nz/courses/info/141/2020/offering?crn=27093
+INFO151,Databases ,,no,https://www.wgtn.ac.nz/courses/info/151/2020/offering?crn=27094
+INFO226,Application Development,INFO151,it,https://www.wgtn.ac.nz/courses/info/226/2020/offering?crn=27096
+INFO231,Management of IT Projects,INFO1??,no,https://www.wgtn.ac.nz/courses/info/231/2020/offering?crn=27097
+INFO234,Business Process Design,INFO1??,ba,https://www.wgtn.ac.nz/courses/info/234/2020/offering?crn=27098
+INFO246,User Experience Design,INFO1??,it,https://www.wgtn.ac.nz/courses/info/246/2020/offering?crn=27099
+INFO264,Business Analytics,INFO151,ba,https://www.wgtn.ac.nz/courses/info/264/2020/offering?crn=27100
+INFO334,Digital Business Innovation,INFO 234,ba,https://www.wgtn.ac.nz/courses/info/334/2020/offering?crn=28272
+INFO336,Social Responsibility in a Digital World,INFO2??,no,https://www.wgtn.ac.nz/courses/info/336/2020/offering?crn=31152
+INFO354,Digital Strategy,INFO2??x2,no,https://www.wgtn.ac.nz/courses/info/354/2020/offering?crn=28273
+INFO360,Information Systems for Health Care,INFO2??x2,no,https://www.wgtn.ac.nz/courses/info/360/2020/offering?crn=31009
+INFO376,Enterprise Architecture,INFO2??x2,no,https://www.wgtn.ac.nz/courses/info/376/2020/offering?crn=28274
+INFO377,System Verification,INFO226,it,https://www.wgtn.ac.nz/courses/info/377/2020/offering?crn=28275
+INFO381,Special Topic: Advanced Web App Development,INFO226,no,https://www.wgtn.ac.nz/courses/info/381/2020/offering?crn=11107
+INFO386,Information Technology Architecture,INFO2??x2,it,https://www.wgtn.ac.nz/courses/info/386/2020/offering?crn=28276
+INFO388,Enterprise Security,INFO2??x2,ba,https://www.wgtn.ac.nz/courses/info/388/2020/offering?crn=28277
+INFO320,Project in Information Systems,"INFO2??x2, INFO3??",it,https://www.wgtn.ac.nz/courses/info/320/2020/offering?crn=8597
+INFO395,Case Studies in Information Systems,"INFO2??x2, INFO3??",ba,https://www.wgtn.ac.nz/courses/info/395/2020/offering?crn=18152
