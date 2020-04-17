@@ -22,7 +22,7 @@ body {
 
 /* Questions Stylings */
 .questions {
-  width: auto;
+  width: 50%;
   padding: 2rem;
   display: flex;
   flex-direction: column;
@@ -116,8 +116,9 @@ body {
 }
 
 /* Planner Stylings */
-.planner {
-  display: none;
+.plannerCourses {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 /* Course Stylings */

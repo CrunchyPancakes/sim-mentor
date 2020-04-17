@@ -28,7 +28,7 @@ function backQuestion() {
 
 function nextQuestion() {
   if (questionIndex == questions.length - 1) {
-    console.log("Can't go next");
+    console.log("Can't go forward");
     return;
   }
   questionIndex++;
@@ -90,6 +90,8 @@ let levelCapstone = [];
 
 // Keep track of courses user has taken/ in progress
 let takenCourses = [];
+// Keep track of courses user is able to select from in the planner
+let courseOptions = [];
 
 // Load courses from courses.js into the above arrays
 storeCourses();
@@ -120,6 +122,7 @@ function storeCourses() {
 // ID of the element should take the form: "level100...", "level200...", "level300..." OR "levelCapstone..."
 function displayCourses(parentElId) {
   const parentEl = document.getElementById(parentElId);
+  parentEl.innerHTML = "";
 
   let courseLevel; // Which level of courses to use
   courseLevel = parentElId.charAt(5);
@@ -137,6 +140,12 @@ function displayCourses(parentElId) {
       break;
     case "C":
       courseArray = levelCapstone;
+      break;
+    case "T":
+      courseArray = takenCourses;
+      break;
+    case "O":
+      courseArray = courseOptions;
   }
 
   courseArray.forEach((course) => {
@@ -156,15 +165,41 @@ function displayCourses(parentElId) {
   });
 }
 
+// Display courses that user is able to select in the planning stage
+function displayCourseOptions() {
+  // empty courseOptions before refilling with courses not taken
+  courseOptions = [];
+  courses.forEach((course) => {
+    if (!takenCourses.includes(course)) {
+      courseOptions.push(course);
+    }
+  });
+
+  displayCourses("levelOptionsPlanner");
+}
+
 function toggleTakenCourse(e) {
   e.target.classList.toggle("selected");
   if (e.target.classList.contains("selected")) {
-    takenCourses.push(e.target.innerText);
+    targetCourseCode = e.target.innerText;
+    courses.forEach((course) => {
+      if (course.code == targetCourseCode) {
+        takenCourses.push(course);
+      }
+    });
   } else {
-    takenCourses.pop(e.target.innerText);
+    targetCourseCode = e.target.innerText;
+    courses.forEach((course) => {
+      if (course.code == targetCourseCode) {
+        takenCourses.splice(takenCourses.indexOf(course), 1);
+      }
+    });
   }
 
   console.log(takenCourses);
+  //  Update courses taken to be shown on course planner page
+  displayCourses("levelTakenPlanner");
+  displayCourseOptions();
 }
 
 // Add event listeners
